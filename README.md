@@ -1,2 +1,2 @@
-# express-phone-number-generator
+# express-phone-number-generator [![Build Status](https://travis-ci.org/katunold/express-phone-number-generator.svg?branch=develop)](https://travis-ci.org/katunold/express-phone-number-generator) [![Maintainability](https://api.codeclimate.com/v1/badges/0991580ae3fd29ff25c6/maintainability)](https://codeclimate.com/github/katunold/express-phone-number-generator/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/0991580ae3fd29ff25c6/test_coverage)](https://codeclimate.com/github/katunold/express-phone-number-generator/test_coverage)
 An application designed to help a telecommunications company to generate random phone numbers for their clients
