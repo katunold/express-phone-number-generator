@@ -3,14 +3,16 @@
 /**
  * Module dependencies.
  */
-const app = require('./src/app');
-const debug = require('debug')('express-phone-number-generator:server');
-const http = require('http');
+import app from './src/app';
+import debug from 'debug';
+import http from 'http';
+
+const debugServer = debug('random-number-generator:server');
 
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**
@@ -83,5 +85,7 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  debugServer('Listening on ' + bind);
 }
+
+export default server;
