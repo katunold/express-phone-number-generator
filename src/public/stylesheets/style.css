@@ -1,8 +1,146 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.navbar {
+  height: 88px;
+  background: #4E308D;
+}
+.title {
+  position: absolute;
+  width: 345px;
+  height: 48px;
+  left: 548px;
+  top: 20px;
+  font-family: Salsa, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFDFD;
 }
 
-a {
-  color: #00B7FF;
+.major {
+  margin-top: 50px;
+}
+
+.major-2 {
+  margin-top: 80px;
+  height: 500px;
+}
+
+.minor {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.subtitle {
+  position: absolute;
+  width: 659px;
+  height: 34px;
+  left: 20%;
+  top: 10%;
+  font-family: Ubuntu, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 34px;
+  color: #4E308D;
+}
+.btns {
+  position: absolute;
+  height: 38px;
+  left: 85%;
+  top: 10%;
+}
+
+.sort {
+  fill: #C4C4C4;
+}
+
+.btn-sort {
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 0; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  top: 10%;
+}
+
+.btn-generate {
+  position: absolute;
+  height: 38px;
+  margin: auto;
+  top: 10%;
+}
+
+.btn-outline-primary {
+  color: #4E308D;
+  border-color: #4E308D;
+  width: 218px;
+  height: 54px;
+  border-radius: 50px;
+  font-family: Lato, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  border-color: #4E308D;
+  background: #4E308D;
+}
+
+/* Darker background on mouse-over */
+.sort:hover {
+  fill: #4E308D;
+}
+
+.contacts {
+  margin-left: 110px;
+}
+.stats {
+  margin-left: 2px;
+}
+th {
+  position: sticky;
+  top: 0;
+}
+
+.tbody-contacts {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.tbody-stats {
+  height: 200px;
+  background: #F5F4F4;
+}
+
+.stats-data {
+  font-family: Lato, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #4E308D;
+}
+
+.error {
+  margin-top: 200px;
+}
+
+hr{
+  height: 1px;
+  color: #4E308D;
+  background-color: #4E308D;
+  border: none;
+}
+
+p {
+  font-family: Lato, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
 }

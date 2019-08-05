@@ -88,4 +88,3 @@ function onListening() {
   debugServer('Listening on ' + bind);
 }
 
-export default server;
