@@ -1,6 +1,99 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+  <nav class="navbar">
+    <h1 class="title">{{title}}</h1>
+  </nav>
+  <div class="row major">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-8">
+          <p class="subtitle">A random number generating app for contacts</p>
+        </div>
+        <div class="col-4 btns">
+          <button onclick="location.href='/generate/ascending'" data-toggle="tooltip" title="Ascending Order" class="btn-sort">
+            <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0L25.9904 22.5H0.00961876L13 0Z" class="sort"/>
+            </svg>
+          </button>
+          <button onclick="location.href='/generate/descending'" data-toggle="tooltip" title="Descending Order" class="btn-sort">
+            <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 23L0.00961679 0.500002L25.9904 0.5L13 23Z" class="sort"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <button type="button" onclick="location.href='/generate'" class="btn btn-outline-primary btn-generate">Generate</button>
+    </div>
+  </div>
+  {% if numbers and numbers|length > 0 %}
+    <div class="row major-2">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-11 minor">
+            <table class="table contacts">
+              <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Contact</th>
+              </tr>
+              </thead>
+              <tbody class="tbody-contacts">
+              {% for number in numbers %}
+                <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ number }}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col-10">
+            <table class="table stats">
+              <thead class="thead-dark">
+              <tr>
+                <th scope="col">
+                  Statistics
+                </th>
+              </tr>
+              </thead>
+              <tbody class="tbody-stats">
+              <tr>
+                <td>Total Contacts : <span class="stats-data">{{ totalContacts }}</span></td>
+              </tr>
+              <tr>
+                <td>Highest Contact : <span class="stats-data">{{ highestContact }}</span></td>
+              </tr>
+              <tr>
+                <td>Lowest Contact : <span class="stats-data">{{ lowestContact }}</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% elseif error is defined %}
+    <div class="container error">
+      <div class="alert alert-info row">
+        <strong>Info!</strong> You need to generate numbers first
+      </div>
+    </div>
+  {% else %}
+    <div class="row major-2">
+      <div class="alert alert-info">
+        <strong>Info!</strong> You need to generate numbers first
+      </div>
+    </div>
+  {% endif %}
+  <hr class="line-break"/>
+  <p align="center">Copyright &copy; 2019 phoneNumberGenerator</p>
+  <p align="center">Designed by Arnold</p>
+
 {% endblock %}

@@ -1,7 +1,9 @@
-{% extends 'layout.twig' %}
+{% extends 'index.twig' %}
 
-{% block body %}
-  <h1>{{message}}</h1>
-  <h2>{{error.status}}</h2>
-  <pre>{{error.stack}}</pre>
-{% endblock %}
+{% block error-content %}
+  <div class="container error">
+    <div class="alert alert-info row">
+      <strong>Info!</strong> You need to generate numbers first
+    </div>
+  </div>
+{% endblock error-content%}
